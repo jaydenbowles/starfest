@@ -211,7 +211,7 @@
         <div class="card-main" data-action="expand" role="button" tabindex="0" aria-expanded="${expanded}" aria-label="${esc(s.title)} — details">
           <div class="card-body">
             <div class="badges">
-              ${s.track ? `<span class="track-badge" style="background:var(--track-${trackClass(s.track)})">${esc(s.track)}</span>` : ''}
+              ${s.track && s.track !== 'Mainstage' ? `<span class="track-badge" style="background:var(--track-${trackClass(s.track)})">${esc(s.track)}</span>` : ''}
               <span class="room-chip">📍 ${esc(s.room)}</span>
             </div>
             <h3 class="card-title">${esc(s.title)}</h3>
