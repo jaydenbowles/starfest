@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>StartFEST 2026 · Schedule</title>
+  <meta name="description" content="StartFEST 2026 conference schedule — June 23–24 · Silicon Slopes. Build your agenda, spot conflicts, and add sessions to your calendar." />
+  <meta name="theme-color" content="#f7f7f5" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎪</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <h1>Start<span class="fest">FEST</span> 2026</h1>
+        <p>June 23–24 · Silicon Slopes · Mountain America Event Venue</p>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <section class="now-banner" id="nowBanner" aria-live="polite"></section>
+
+    <nav class="tabs" role="tablist" aria-label="Schedule views">
+      <button class="tab" role="tab" id="tab-1" aria-selected="true">Tue 23</button>
+      <button class="tab" role="tab" id="tab-2" aria-selected="false">Wed 24</button>
+      <button class="tab" role="tab" id="tab-agenda" aria-selected="false">
+        My Agenda <span class="count" id="agendaCount" hidden>0</span>
+      </button>
+    </nav>
+
+    <main id="view"></main>
+
+    <footer class="footer">
+      <p>All times Mountain Time (MDT) · Schedule subject to change<br />
+      StartFEST 2026 · Mountain America Event Venue · Loveland Living Planet Aquarium</p>
+    </footer>
+  </div>
+
+  <dialog id="nameDialog">
+    <h3>What's your name?</h3>
+    <p>Your name shows up in "Who's going" so friends can find you in sessions. Stored only on this device.</p>
+    <input type="text" id="nameInput" placeholder="e.g. Jayden B." autocomplete="name" maxlength="40" />
+    <div class="dialog-actions">
+      <button class="btn" id="nameSkip">Skip</button>
+      <button class="btn primary" id="nameSave">Save</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
